@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Página de teste</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="página de testes de HTML">
+		<style>
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+			}
+
+			h1,
+			h2,
+			body {
+				font-family: Arial;
+				padding: 0px;
+				margin: 0px;
+			}
+
+			.header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			.header-name {
+				text-align: center;
+				width: 50%;
+			}
+
+			.menu {
+				width: 50%;
+			}
+
+			.menu-content {
+				display: flex;
+				justify-content: space-evenly;
+				border: solid red;
+			}
+
+			.menu-content a {
+				color: black;
+				text-decoration: none;
+			}
+
+			.menu-content li {
+				list-style: none;
+			}
+
+			.menu-links {
+				border: solid blue;
+				border-radius: 1rem;
+				text-align: center;
+				padding: 0.5em;
+			}
+
+		</style>
+	</head>
+	<body>
+		<header id="main-header" class="header">
+			<div class="header-name">
+				<h1>Pager</h1>
+				<h2>First page after awhile</h2>
+			</div>
+			<nav class="menu">
+				<ul class="menu-content">
+					<li class="menu-links"><a href="#">About this page</a></li>
+					<li class="menu-links"><a href="#">About me</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="about-me">
+				<div class="about-me">
+					<div class="intro">
+						<p>
+							Hello! My name is João Paulo Ferrari Sant'Ana, I'm a backend dev who's
+							obliged to work at the front end while he learns about important concepts.
+						</p>
+					</div>
+					<div class="studies">
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
