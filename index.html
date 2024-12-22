@@ -6,6 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="página de testes de HTML">
 		<style>
+			:root {
+				--viewport_title_height: 15vh;
+			}
+
 			*,
 			*::before,
 			*::after {
@@ -14,16 +18,40 @@
 
 			h1,
 			h2,
-			body {
-				font-family: Arial;
+			h3,
+			h4,
+			body,
+			ol,
+			ul,
+			p {
 				padding: 0px;
 				margin: 0px;
+			}
+
+			body {
+				font-family: Arial;
+			}
+
+			details p {
+				margin-top: 0.5rem;
+				padding-left: 1.5rem;
+			}
+
+			.bold {
+				font-weight: bold;
+			}
+
+			.link {
+				color: black;
+				text-decoration: none;
 			}
 
 			.header {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
+				height: var(--viewport_title_height);
+				border-bottom: 1px solid black;
 			}
 
 			.header-name {
@@ -38,23 +66,32 @@
 			.menu-content {
 				display: flex;
 				justify-content: space-evenly;
-				border: solid red;
 			}
 
-			.menu-content a {
-				color: black;
-				text-decoration: none;
-			}
-
-			.menu-content li {
+			.menu-list {
 				list-style: none;
-			}
-
-			.menu-links {
 				border: solid blue;
 				border-radius: 1rem;
-				text-align: center;
 				padding: 0.5em;
+			}
+
+			.special-list {
+				border-bottom: 1px solid black;
+				list-style: none;
+				margin-top: 1em;
+			}
+
+			.content {
+				display: flex;
+				align-items: start;
+				justify-content: space-evenly;
+			}
+
+			.left,
+			.right {
+				padding: 2em;
+				/* each will have half screen */
+				max-width: 50%;
 			}
 
 		</style>
@@ -67,24 +104,44 @@
 			</div>
 			<nav class="menu">
 				<ul class="menu-content">
-					<li class="menu-links"><a href="#">About this page</a></li>
-					<li class="menu-links"><a href="#">About me</a></li>
+					<li class="menu-list"><a href="#" class="link">About this page</a></li>
+					<li class="menu-list"><a href="#" class="link">About me</a></li>
 				</ul>
 			</nav>
 		</header>
 		<main>
-			<div class="about-me">
-				<div class="about-me">
-					<div class="intro">
-						<p>
-							Hello! My name is João Paulo Ferrari Sant'Ana, I'm a backend dev who's
-							obliged to work at the front end while he learns about important concepts.
-						</p>
+			<section id="apresentation">
+				<div class="header">
+					<h2>But before we start it...</h2>
+				</div>
+				<div class="content">
+					<div class="left">
+						<details id="interests">
+							<summary>A little about me!</summary>
+							<p>
+								My name is João Paulo Ferrari Sant'Ana, my tastes are diverse:
+								I love books, mythology, computers and I think that it is a very good
+								thing to always learn something new when possible!
+							</p>
+							<p>
+								I generally do read about how the past was and fantasy novels
+							</p>
+						</details>
 					</div>
-					<div class="studies">
+					<div class="right">
+						<details id="skills">
+							<summary>What skills do I possess?</summary>
+							<p>Currently I tend to work with the following:</p>
+							<ol>
+								<li class="special-list">Python</li>
+								<li class="special-list">PHP</li>
+								<li class="special-list">MySQL</li>
+								<li class="special-list">SQLite</li>
+							</ol>
+						</details>
 					</div>
 				</div>
-			</div>
+			</section>
 		</main>
 	</body>
 </html>
